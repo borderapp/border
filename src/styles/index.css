@@ -1,0 +1,34 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* ── Mobile responsiveness ──────────────────────────────────── */
+* { box-sizing: border-box; }
+html, body, #root { width: 100%; overflow-x: hidden; }
+
+/* Hide scrollbars on scroll containers */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Prevent text overflow on all small-screen cards */
+@media (max-width: 390px) {
+  .text-2xl { font-size: 1.25rem !important; }
+  .text-3xl { font-size: 1.5rem !important; }
+  .text-5xl, .text-6xl { font-size: 2rem !important; }
+  .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .gap-8 { gap: 1rem !important; }
+  .pt-12 { padding-top: 2rem !important; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   CAPACITOR / MOBILE OVERFLOW SAFETY
+   Prevents any element from widening document.body
+   ═══════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; max-width: 100%; }
+body { overflow-x: hidden; max-width: 100%; position: relative; }
+#root { overflow-x: hidden; width: 100%; max-width: 100%; }
+
+/* scrollbar-hide utility */
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
